@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <!-- Meta y Bootstrap -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>PESCA CHOD</title>
+    <link rel="stylesheet" href="main.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+      .hero {
+        background: linear-gradient(120deg, #ffffff 40%, #0056b3 100%);
+        min-height: 60vh;
+        display: flex;
+        align-items: center;
+      }
+      .hero-text {
+        color: #fff;
+        font-size: 2rem;
+        font-weight: 300;
+      }
+      .logo-fish {
+        max-width: 200px;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+      <div class="container">
+        <a class="navbar-brand fw-bold" href="#">PESCA CHOD</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+          <ul class="nav nav-tabs navbar-nav" id="myTab" role="tablist">
+            <li class="nav-item"><a class="nav-link active" id="quees-tab" data-bs-toggle="tab" href="#quees" role="tab">¿Qué es?</a></li>
+            <li class="nav-item"><a class="nav-link" id="quienes-tab" data-bs-toggle="tab" href="#quienes" role="tab">Quiénes somos</a></li>
+            <li class="nav-item"><a class="nav-link" id="impacto-tab" data-bs-toggle="tab" href="#impacto" role="tab">Impacto</a></li>
+            <li class="nav-item"><a class="nav-link" id="problema-tab" data-bs-toggle="tab" href="#problema" role="tab">El problema</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- HERO -->
+    <section class="hero">
+      <div class="container text-center">
+        <img src="1f73e21e-fa2c-426e-a3fd-7506f3e56ae6.png" alt="Logo pez" class="logo-fish mb-3">
+        <h1 class="hero-text">“Pesca consciente y segura”</h1>
+      </div>
+    </section>
+
+    <!-- CONTENIDO CON TABS -->
+    <div class="container my-5">
+      <div class="tab-content" id="myTabContent">
+        <!-- Tab ¿Qué es? -->
+        <div class="tab-pane fade show active" id="quees" role="tabpanel">
+          <h2>¿Qué es?</h2>
+          <p>Es un dispositivo diseñado para medir parámetros de calidad del agua en zonas de pesca, promoviendo la seguridad y sostenibilidad.</p>
+        </div>
+        <!-- Tab Quiénes somos -->
+        <div class="tab-pane fade" id="quienes" role="tabpanel">
+          <h2>Quiénes somos</h2>
+          <p>Un equipo comprometido con la conservación ambiental y el desarrollo de tecnologías accesibles para pescadores y comunidades.</p>
+        </div>
+        <!-- Tab Impacto -->
+        <div class="tab-pane fade" id="impacto" role="tabpanel">
+          <h2>Impacto</h2>
+          <p>Contribuye a la pesca responsable, evita riesgos de consumo de agua contaminada y ayuda a proteger los ecosistemas acuáticos.</p>
+        </div>
+        <!-- Tab El problema -->
+        <div class="tab-pane fade" id="problema" role="tabpanel">
+          <h2>El problema</h2>
+          <p>La contaminación del agua afecta la salud humana, la biodiversidad y la economía pesquera. Nuestro dispositivo busca ser parte de la solución.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
