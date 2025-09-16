@@ -1,83 +1,155 @@
 <!doctype html>
 <html lang="es">
   <head>
-    <!-- Meta y Bootstrap -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>PESCA CHOD</title>
-    <link rel="stylesheet" href="main.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
+      body {
+        font-family: 'Segoe UI', sans-serif;
+      }
+      .navbar {
+        box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      }
+      .nav-link {
+        font-weight: 500;
+      }
       .hero {
         background: linear-gradient(120deg, #ffffff 40%, #0056b3 100%);
-        min-height: 60vh;
+        min-height: 70vh;
         display: flex;
         align-items: center;
-      }
-      .hero-text {
-        color: #fff;
-        font-size: 2rem;
-        font-weight: 300;
+        justify-content: center;
+        flex-direction: column;
+        text-align: center;
+        color: white;
       }
       .logo-fish {
         max-width: 200px;
+        margin-bottom: 20px;
+      }
+      /* SECCIONES */
+      section {
+        padding: 80px 20px;
+        position: relative;
+      }
+      section h2 {
+        text-align: center;
+        margin-bottom: 20px;
+        color: #0056b3;
+      }
+      .wave {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        height: 80px;
+        background: #0056b3;
+        clip-path: ellipse(70% 100% at 50% 100%);
+      }
+      /* Testimonios estilo burbuja */
+      .bubble {
+        background: #e9f3ff;
+        border-radius: 20px;
+        padding: 15px;
+        margin-bottom: 20px;
+        position: relative;
+      }
+      .bubble::after {
+        content: "";
+        position: absolute;
+        bottom: -15px;
+        left: 20px;
+        border-width: 15px 15px 0;
+        border-style: solid;
+        border-color: #e9f3ff transparent;
       }
     </style>
   </head>
   <body>
-    <!-- NAVBAR -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top">
       <div class="container">
-        <a class="navbar-brand fw-bold" href="#">PESCA CHOD</a>
+        <a class="navbar-brand fw-bold" href="#inicio">PESCA CHOD</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-          <ul class="nav nav-tabs navbar-nav" id="myTab" role="tablist">
-            <li class="nav-item"><a class="nav-link active" id="quees-tab" data-bs-toggle="tab" href="#quees" role="tab">¿Qué es?</a></li>
-            <li class="nav-item"><a class="nav-link" id="quienes-tab" data-bs-toggle="tab" href="#quienes" role="tab">Quiénes somos</a></li>
-            <li class="nav-item"><a class="nav-link" id="impacto-tab" data-bs-toggle="tab" href="#impacto" role="tab">Impacto</a></li>
-            <li class="nav-item"><a class="nav-link" id="problema-tab" data-bs-toggle="tab" href="#problema" role="tab">El problema</a></li>
+          <ul class="navbar-nav">
+            <li class="nav-item"><a class="nav-link" href="#quees">¿Qué es?</a></li>
+            <li class="nav-item"><a class="nav-link" href="#quienes">Quiénes somos</a></li>
+            <li class="nav-item"><a class="nav-link" href="#problema">El problema</a></li>
+            <li class="nav-item"><a class="nav-link" href="#sumate">Súmate</a></li>
           </ul>
         </div>
       </div>
     </nav>
 
-    <!-- HERO -->
-    <section class="hero">
-      <div class="container text-center">
-        <img src="1f73e21e-fa2c-426e-a3fd-7506f3e56ae6.png" alt="Logo pez" class="logo-fish mb-3">
-        <h1 class="hero-text">“Pesca consciente y segura”</h1>
+    <section id="inicio" class="hero">
+      <img src="img/logo-pez.png" alt="Logo pez" class="logo-fish">
+      <h1>“Pesca consciente y segura”</h1>
+    </section>
+
+    <section id="quees" class="bg-light">
+      <div class="container">
+        <h2>¿Qué es PESCA CHOD?</h2>
+        <p class="text-center lead">
+          Pesca Chod es un dispositivo innovador que mide la calidad del agua y te indica si hay peces en esa agua y si estos son aptos para el consumo.
+        </p>
+        <p>
+          Diseñado para pescadores responsables que quieren cuidarse, combina tecnología y conciencia ambiental para transformar la forma en la que nos relacionamos con nuestros ríos y lagos.
+        </p>
+        <div class="row mt-4">
+          <div class="col-md-4"><img src="img/fotos/f1.jpg" class="img-fluid rounded"></div>
+          <div class="col-md-4"><img src="img/fotos/f2.jpg" class="img-fluid rounded"></div>
+          <div class="col-md-4"><img src="img/fotos/f3.jpg" class="img-fluid rounded"></div>
+        </div>
+      </div>
+      <div class="wave"></div>
+    </section>
+
+    <section id="problema">
+      <div class="container">
+        <h2>El problema</h2>
+        <p>
+          Hoy la pesca enfrenta un gran desafío: la falta de información sobre el estado del agua. Muchas veces no sabemos si un río o lago está contaminado, lo que puede poner en riesgo tanto nuestra salud como la de los ecosistemas.
+        </p>
+        <p>
+          Sin datos confiables, la pesca se convierte en una actividad insegura y poco sustentable.
+        </p>
+        <img src="img/fotos/problema.jpg" class="img-fluid rounded mt-3" alt="Contaminación en río">
+      </div>
+      <div class="wave"></div>
+    </section>
+
+    <section id="quienes" class="bg-light">
+      <div class="container">
+        <h2>¿Quiénes somos?</h2>
+        <p>
+          Somos un equipo de estudiantes comprometidos con la innovación y el cuidado del ambiente. Creemos que la tecnología puede ser una herramienta clave para hacer de la pesca una actividad más segura, consciente y respetuosa con la naturaleza.
+        </p>
+
+        <h3 class="mt-5">Ustedes</h3>
+        <div class="bubble">“Con el Pesca Chod evité meterme en un arroyo que estaba muy contaminado, pero con la simple vista parecía limpio. Me tiró los datos y me fui a otro spot.” <br><small>— Martín, Tigre.</small></div>
+        <div class="bubble">“Lo probamos en el Paraná con mis amigos y nos marcó que el agua estaba bien. Terminamos sacando unos doraditos.” <br><small>— Sofía, Buenos Aires.</small></div>
+        <div class="bubble">“Antes me daba fiebre y me costaba pescar, ahora tengo más confianza porque sé que el agua no está contaminada.” <br><small>— Lucas, Delta.</small></div>
+      </div>
+      <div class="wave"></div>
+    </section>
+
+    <section id="sumate">
+      <div class="container">
+        <h2>¡Súmate!</h2>
+        <p>
+          Queremos que formes parte de Pesca Chod. Ya sea dando ideas como usuario o como desarrollador, compartí tus experiencias y ayudanos a crecer esta comunidad.
+        </p>
+        <p>
+          Juntos podemos cuidar nuestros ríos y garantizar una pesca consciente y segura para el futuro.
+        </p>
+
       </div>
     </section>
 
-    <!-- CONTENIDO CON TABS -->
-    <div class="container my-5">
-      <div class="tab-content" id="myTabContent">
-        <!-- Tab ¿Qué es? -->
-        <div class="tab-pane fade show active" id="quees" role="tabpanel">
-          <h2>¿Qué es?</h2>
-          <p>Es un dispositivo diseñado para medir parámetros de calidad del agua en zonas de pesca, promoviendo la seguridad y sostenibilidad.</p>
-        </div>
-        <!-- Tab Quiénes somos -->
-        <div class="tab-pane fade" id="quienes" role="tabpanel">
-          <h2>Quiénes somos</h2>
-          <p>Un equipo comprometido con la conservación ambiental y el desarrollo de tecnologías accesibles para pescadores y comunidades.</p>
-        </div>
-        <!-- Tab Impacto -->
-        <div class="tab-pane fade" id="impacto" role="tabpanel">
-          <h2>Impacto</h2>
-          <p>Contribuye a la pesca responsable, evita riesgos de consumo de agua contaminada y ayuda a proteger los ecosistemas acuáticos.</p>
-        </div>
-        <!-- Tab El problema -->
-        <div class="tab-pane fade" id="problema" role="tabpanel">
-          <h2>El problema</h2>
-          <p>La contaminación del agua afecta la salud humana, la biodiversidad y la economía pesquera. Nuestro dispositivo busca ser parte de la solución.</p>
-        </div>
-      </div>
-    </div>
-
-    <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   </body>
 </html>
